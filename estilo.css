@@ -1,28 +1,46 @@
+/* SELETORES DE TAG */
 body{
-    background-color: rgb(70, 17, 168);
+    background-color: aqua; /* Cor de fundo do elemento*/
 }
 form{
     background-color: #f5f5f5aa;
-    padding: 0.5em;
+    padding: 0.5em; /* Preenchimento - espaço entre o conteúdo e a borda (vide box-model) */
 }
 input{
-    border-width: 0;
-    border-radius: 0.5em;
+    border-width: 0; /* Espessura da borda */
+    border-radius: 0.5em; /* Cantos da borda arredondados */
     padding: 0.5em;
+    /*
+    box-shadow: define a sombra do elemento, recebe três informações separadas por espaço em branco
+    1º Tamanho da sombra na horizontal, valores positivos movem a sombra pra direita
+    2º Tamanho da sombra na vertical, valores positivos movem a sombra pra baixo
+    3º Cor da sombra
+    */
     box-shadow: -2px 2px #00000033;
 }
-/* form > div{
-
-} */
 .grupo{
-    margin-top: 1em; /* opções: top, bottom, left, right */
+    /* 
+    Margem - espaço entre a borda desse elemento e do próximo (vide box-model) 
+    No exemplo abaixo, define-se apenas a magem superior (top)
+    Outras direções possíveis são:
+    - bottom: margem inferior do elemento
+    - left: margem esquerda do elemento
+    - start: margem esquerda do elemento
+    - right: margem direita do elemento
+    - end: margem direita do elemento
+    */
+    margin-top: 1em; 
 }
 .grupo > label{
+    /*
+    Display - define como o elemento deve ser exibido
+    O valor "block" determina que o elemento irá ocupar todo espaço lateral, independente do seu tamanho
+    O que força que os demais elementos fiquem a cima ou abaixo
+    */
     display: block;
 }
 .btn{
-    background-color: rgb(70, 17, 168);
-    font-weight: bolder; /* Negrito */
-    color: #f5f5f5;
-    text-transform: uppercase; /* Letras maiúsculas */
+    background-color: aqua;
+    font-weight: bolder; /* Espessura da letra (negrito) */
+    text-transform: uppercase; /* Torna as letras maiúsculas */
 }
