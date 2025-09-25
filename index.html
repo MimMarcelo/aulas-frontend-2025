@@ -3,20 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="estilo.css">
+    <!-- <link rel="stylesheet" href="coisa.css"> -->
+
     <title>Document</title>
 </head>
 <body>
     <form action="">
-        <div>
+        <div class="grupo">
             <label for="matricula">Matrícula</label>
-            <input type="text" id="matricula" placeholder="Ex. 2025401110032">
+            <input type="text" id="matricula"
+                placeholder="Ex. 2025401110032" class="controle">
         </div>
-        <div>
+        <div class="grupo">
             <label for="senha">Senha</label>
-            <input id="senha" type="password" placeholder="Ex. T3st#">
+            <input id="senha" type="password" placeholder="Ex. T3st#" class="controle">
         </div>
-        <div>
-            <input type="submit" value="Logar">
+        <div class="grupo">
+            <input type="submit" value="Logar" class="btn">
         </div>
     </form>
 </body>
