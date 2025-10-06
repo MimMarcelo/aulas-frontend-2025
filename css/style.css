@@ -1,0 +1,157 @@
+/* --- Variáveis CSS para Temas (Material Design) --- */
+:root {
+    --md-sys-color-primary: #6750A4;
+    --md-sys-color-on-primary: #FFFFFF;
+    --md-sys-color-primary-container: #EADDFF;
+    --md-sys-color-on-primary-container: #21005D;
+    --md-sys-color-secondary: #625B71;
+    --md-sys-color-secondary-container: #E8DEF8;
+    --md-sys-color-tertiary: #7D5260;
+    --md-sys-color-background: #FFFBFE;
+    --md-sys-color-surface: #FFFBFE;
+    --md-sys-color-surface-variant: #E7E0EC;
+    --md-sys-color-on-surface: #1C1B1F;
+    --md-sys-color-on-surface-variant: #49454F;
+    --md-sys-color-outline: #79747E;
+    --md-sys-color-shadow: #000000;
+    --md-sys-elevation-level1: 0px 1px 2px 0px rgba(0, 0, 0, 0.3), 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+    --md-sys-elevation-level2: 0px 1px 2px 0px rgba(0, 0, 0, 0.3), 0px 2px 6px 2px rgba(0, 0, 0, 0.15);
+}
+
+[data-theme="dark"] {
+    --md-sys-color-primary: #D0BCFF;
+    --md-sys-color-on-primary: #381E72;
+    --md-sys-color-primary-container: #4F378B;
+    --md-sys-color-on-primary-container: #EADDFF;
+    --md-sys-color-secondary: #CCC2DC;
+    --md-sys-color-secondary-container: #4A4458;
+    --md-sys-color-tertiary: #EFB8C8;
+    --md-sys-color-background: #1C1B1F;
+    --md-sys-color-surface: #1C1B1F;
+    --md-sys-color-surface-variant: #49454F;
+    --md-sys-color-on-surface: #E6E1E5;
+    --md-sys-color-on-surface-variant: #CAC4D0;
+    --md-sys-color-outline: #938F99;
+    --md-sys-elevation-level1: 0px 1px 2px 0px rgba(0, 0, 0, 0.3), 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+    --md-sys-elevation-level2: 0px 1px 2px 0px rgba(0, 0, 0, 0.3), 0px 2px 6px 2px rgba(0, 0, 0, 0.15);
+}
+
+/* --- Estilos Globais --- */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--md-sys-color-background);
+    color: var(--md-sys-color-on-surface);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+header, footer {
+    background-color: var(--md-sys-color-surface);
+    border-color: var(--md-sys-color-outline) !important;
+}
+
+/* --- Utilitários de Elevação (Material Design) --- */
+.elevation-1 {
+    box-shadow: var(--md-sys-elevation-level1);
+}
+
+.elevation-2 {
+    box-shadow: var(--md-sys-elevation-level2);
+}
+
+/* --- Card de Aula (Material Design) --- */
+.lesson-card {
+    background-color: var(--md-sys-color-surface);
+    border: 1px solid var(--md-sys-color-outline);
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    height: 100%;
+}
+
+.lesson-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--md-sys-elevation-level2);
+}
+
+.lesson-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.lesson-card-content {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.lesson-card-icon {
+    background-color: var(--md-sys-color-primary-container);
+    color: var(--md-sys-color-on-primary-container);
+    padding: 1rem;
+    border-radius: 12px;
+    margin-right: 1rem;
+}
+
+.lesson-card-text h5 {
+    color: var(--md-sys-color-on-surface);
+    margin: 0;
+    font-weight: 500;
+}
+
+.lesson-card-text small {
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+/* --- Interruptor de Tema (Theme Switcher) --- */
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.theme-switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.theme-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: var(--md-sys-color-primary);
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
